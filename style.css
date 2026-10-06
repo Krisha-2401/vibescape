@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #101010;
+    color: #f4f0e8;
+}
+
+
+/* HEADER */
+
+header {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #292929;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+#themeBtn {
+    background: none;
+    border: 1px solid #444;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 620px;
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tag,
+.section-heading p,
+.board-text > p {
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: .9;
+    letter-spacing: -5px;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: #d7ff55;
+}
+
+.intro {
+    color: #aaa;
+    max-width: 450px;
+    line-height: 1.7;
+    margin: 35px 0;
+}
+
+.start {
+    display: inline-block;
+    padding: 14px 24px;
+    background: #d7ff55;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.start:hover {
+    transform: translateY(-3px);
+}
+
+.floating-note {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #f0c6ff;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: rotate(8deg);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.floating-note span {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.floating-note strong {
+    margin-top: 8px;
+}
+
+
+/* VIBES */
+
+.vibe-section {
+    padding: 100px 10%;
+    background: #171717;
+}
+
+.section-heading h2 {
+    font-size: 45px;
+    margin-bottom: 45px;
+}
+
+.vibe-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.vibe-card {
+    height: 240px;
+    border: none;
+    text-align: left;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #111;
+    transition: .25s;
+}
+
+.vibe-card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+}
+
+.vibe-card span {
+    font-size: 45px;
+}
+
+.vibe-card strong {
+    font-size: 25px;
+}
+
+.vibe-card small {
+    font-size: 12px;
+}
+
+.happy {
+    background: #d7ff55;
+}
+
+.chill {
+    background: #a9e8d1;
+}
+
+.energy {
+    background: #ff9966;
+}
+
+.night {
+    background: #cbb8ff;
+}
+
+.result {
+    margin-top: 30px;
+    min-height: 50px;
+    color: #ddd;
+    line-height: 1.7;
+}
+
+
+/* PLAYLIST */
+
+.playlist-section {
+    padding: 100px 10%;
+}
+
+.mix {
+    max-width: 850px;
+}
+
+.mix-item {
+    display: grid;
+    grid-template-columns: 60px 1fr 40px;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #292929;
+}
+
+.number {
+    color: #666;
+    font-size: 13px;
+}
+
+.mix-item h3 {
+    margin-bottom: 6px;
+}
+
+.mix-item p {
+    color: #888;
+    font-size: 14px;
+}
+
+.mix-item > span {
+    font-size: 20px;
+}
+
+
+/* BOARD */
+
+.board {
+    min-height: 550px;
+    padding: 90px 10%;
+    background: #d7ff55;
+    color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.board-text {
+    max-width: 400px;
+}
+
+.board-text > p {
+    color: #555;
+}
+
+.board-text h2 {
+    font-size: 60px;
+    line-height: .95;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
+}
+
+.board-text button {
+    border: 2px solid #111;
+    background: none;
+    padding: 13px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#thought {
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+.board-notes {
+    width: 400px;
+    height: 350px;
+    position: relative;
+}
+
+.note {
+    position: absolute;
+    padding: 25px;
+    width: 190px;
+    min-height: 120px;
+    box-shadow: 5px 8px 0 #111;
+    font-weight: bold;
+}
+
+.one {
+    background: #f0c6ff;
+    transform: rotate(-8deg);
+    top: 20px;
+    left: 20px;
+}
+
+.two {
+    background: #ff9966;
+    transform: rotate(7deg);
+    top: 120px;
+    right: 20px;
+}
+
+.three {
+    background: #a9e8d1;
+    transform: rotate(-3deg);
+    bottom: 10px;
+    left: 70px;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 50px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #777;
+}
+
+footer h2 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+
+/* LIGHT MODE */
+
+.light {
+    background: #f5f2ea;
+    color: #181818;
+}
+
+.light header,
+.light .playlist-section {
+    background: #f5f2ea;
+}
+
+.light .vibe-section {
+    background: #ebe7dc;
+}
+
+.light .hero {
+    background: #f5f2ea;
+}
+
+.light nav a {
+    color: #555;
+}
+
+.light .intro,
+.light .mix-item p {
+    color: #555;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 70px 8%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 60px;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .floating-note {
+        align-self: center;
+    }
+
+    .vibe-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .board {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 60px;
+    }
+
+    .board-notes {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .vibe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 35px;
+    }
+
+    .board-text h2 {
+        font-size: 45px;
+    }
+}
